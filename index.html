@@ -113,6 +113,7 @@
         .sobre::-webkit-scrollbar-track {
             background-color: transparent; /* Color del track (área detrás del thumb) */
         }
+
     </style>
 </head>
 <body class="fondo">
@@ -149,10 +150,6 @@
             </p>
         </div>
     </div>
-    <audio autoplay>
-        <source src="yuya.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
 
     <script>
         var miDiv = document.getElementById("miDiv");
@@ -178,6 +175,12 @@
             var newImage = currentImage.includes("hoja.png") ? "url('hoja.png')" : "url('hoja.png')";
             divElement.style.backgroundImage = newImage;
         }
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("miAudio");
+            audio.play();
+        });
     </script>
 </body>
 </html>
