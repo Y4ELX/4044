@@ -171,7 +171,7 @@
 
             color: rgb(54, 54, 54); font-family: monospace;
             font-weight: 600;
-            font-size: 1cqmax;
+            font-size: 0.5cqmax;
             max-height: 400px;
             min-height: 400px;
             width: 30%;
@@ -248,7 +248,7 @@
 
 <div class="carta">
     <div style="min-width: 30%; width: 30%; margin-right: 20px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 30%;">
-        <p style="line-height: 1em; text-align: center; color: #822841; font-family: ahorasi; font-size: 4cqmax;">Feliz<br>Cumplee<33</p>
+        <p style="line-height: 1em; text-align: center; color: #822841; font-family: ahorasi; font-size: 4cqmax;">Feliz<br>Cumplee<br>💗</p>
     </div>
 
     <div class="divimagen">
@@ -283,14 +283,14 @@
     <!--CELULAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARRRR-->
     <div class="cartacelu">
         <div style="min-width: 30%; width: 30%; margin-right: 20px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 30%;">
-            <p style="line-height: 1em; text-align: center; color: #822841; font-family: ahorasi; font-size: 2cqmax;">Feliz<br>Cumplee<33</p>
+            <p style="line-height: 1em; text-align: center; color: #822841; font-family: ahorasi; font-size: 2cqmax;">Feliz<br>Cumplee<br>💗</p>
         </div>
 
         <div class="divimagencelu">
             <img class="imagencelu" src="melmonita.png">
         </div>
 
-        <div class="sobrecelu" id="miDiv">
+        <div class="sobrecelu" id="miDivcelu">
             <p style="cursor: text; display: none;">
                 Felis cumpleee miamoorrr&lt;33
                 <br>
@@ -343,6 +343,36 @@
             var newImage = currentImage.includes("hoja.png") ? "url('hoja.png')" : "url('hoja.png')";
             divElement.style.backgroundImage = newImage;
         }
+
+        //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+        var miDivcelu = document.getElementById("miDivcelu");
+        var textocelu = miDivcelu.querySelector("p");
+        var clickedcelu = false; // Bandera para rastrear si se ha hecho clic
+
+        miDivcelu.addEventListener("click", function() {
+            if (!clickedcelu) {
+                // Cambiar la imagen de fondo aquí si lo deseas
+                miDivcelu.style.backgroundImage = "url('hoja.png')";
+                textocelu.style.display = "block";
+                
+                
+                miDivcelu.style.borderColor = "#FDF9F2";
+                textocelu.style.display = "block";
+                clickedcelu = true; // Marcar como clic hecho
+            }
+        });
+
+        // Función para cambiar la imagen de fondo
+        function changeBackgroundImage() {
+            var divElement = document.getElementById("miDiv");
+            var currentImage = divElement.style.backgroundImage;
+            var newImage = currentImage.includes("hoja.png") ? "url('hoja.png')" : "url('hoja.png')";
+            divElement.style.backgroundImage = newImage;
+        }
+
+       //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
 
 
         document.addEventListener("DOMContentLoaded", function() {
