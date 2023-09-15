@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Para mi niña hermosa&lt;3</title>
+    <link rel="icon" href="./fonts/favicon.ico" type="image/ico">
+    <style>
+        ::selection {
+            background-color: #c6b3d9; /* Cambia el color de fondo de la selección a amarillo */
+        }
+        @font-face {
+            font-family: 'ahorasi';
+            src: url('fonts/ahorasi.ttf')
+        } 
+        
+        @font-face {
+            font-family: 'pilin';
+            src: url('fonts/esotilin.otf')
+        }
+        
+        .fondo{
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('fondo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* Cambia a "fixed" */
+            background-position: center center;
+            margin: 70px;
+        }
+
+        .carta{
+            border-radius: 30px;
+            background-color: rgb(255, 241, 241);
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            height: 500px;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagen{
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 460px;
+            filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+        }
+
+        .divimagen{
+            z-index: 3;
+            min-width: 30%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            max-height: 400px;
+            min-height: 400px;
+        }
+
+        .sobre{
+            background-image: url('sobre.png');
+
+            border-radius: 20px;
+            cursor: pointer;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+
+            border: solid;
+            border-color: #8E8066;
+            border-width: 10px;
+
+            color: rgb(54, 54, 54); font-family: monospace;
+            font-weight: 600;
+            font-size: 1cqmax;
+            max-height: 400px;
+            min-height: 400px;
+            width: 30%;
+            padding-left: 60px;
+            padding-right: 20px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            overflow: scroll;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-left: 20px;
+            background-color: black;
+            /*background-color: #C2AF8B;*/
+            transition: background-image 0.5s;
+        }
+
+        .sobre:hover{
+            background-image: url('sobreabierto.png');
+            transition: background-image 0.5s;
+        }
+
+        .sobre::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .sobre::-webkit-scrollbar-thumb {
+            background-color: #BFD9F2; /* Color del thumb (scrollbar deslizante) */
+            border-radius: 5px;
+        }
+
+        .sobre::-webkit-scrollbar-track {
+            background-color: transparent; /* Color del track (área detrás del thumb) */
+        }
+
+        /*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+        .cartacelu{
+            border-radius: 30px;
+            background-color: rgb(255, 241, 241);
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px;
+            height: 400px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagencelu{
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 350px;
+            width: 400px;
+            filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+        }
+
+        .divimagencelu{
+            z-index: 3;
+            min-width: 30%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            max-height: 400px;
+            min-height: 400px;
+        }
+
+        .sobrecelu{
+            background-image: url('sobre.png');
+
+            border-radius: 20px;
+            cursor: pointer;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+
+            border: solid;
+            border-color: #8E8066;
+            border-width: 5px;
+
+            color: rgb(54, 54, 54); font-family: monospace;
+            font-weight: 600;
+            font-size: 13px;
+            max-height: 100px;
+            min-height: 300px;
+            width: 30%;
+            padding-left: 20px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            overflow: scroll;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-left: 20px;
+            background-color: black;
+            /*background-color: #C2AF8B;*/
+            transition: background-image 0.5s;
+        }
+
+        .sobrecelu:hover{
+            background-image: url('sobreabierto.png');
+            transition: background-image 0.5s;
+        }
+
+        .sobrecelu::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sobrecelu::-webkit-scrollbar-thumb {
+            background-color: #BFD9F2; /* Color del thumb (scrollbar deslizante) */
+            border-radius: 1px;
+        }
+
+        .sobrecelu::-webkit-scrollbar-track {
+            background-color: transparent; /* Color del track (área detrás del thumb) */
+        }
+
+        /*TERMINAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+
+
+
+        .fondo::-webkit-scrollbar{
+            width: 20px;
+        }
+
+        .fondo::-webkit-scrollbar-thumb {
+            background-color: #da849b; /* Color del thumb (scrollbar deslizante) */
+            border-radius: 70px;
+        }
+
+        .fondo::-webkit-scrollbar-track {
+            background-color: #f9e5ec; /* Color del track (área detrás del thumb) */
+        }
+
+
+
+        /* Definir estilos base para ambos elementos */
+        .carta, .cartacelu {
+            display: none; /* Ocultar por defecto */
+        }
+
+        /* Mostrar en computadora */
+        .computadora .carta {
+            display: flex;
+        }
+
+        /* Mostrar en dispositivo móvil */
+        .movil .cartacelu {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="fondo" on onmouseover="playAudio()">
+    <audio loop id="myAudio">
+        <source src="hbty.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <div class="carta">
+        <div style="min-width: 30%; width: 30%; margin-right: 20px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 30%;">
+            <p style="line-height: 1em; text-align: center; color: #822841; font-family: ahorasi; font-size: 4cqmax;">Feliz<br>Cumplee<br>💗</p>
+        </div>
+    
+        <div class="divimagen">
+            <img class="imagen" src="melmonita.png">
+        </div>
+    
+        <div class="sobre" id="miDiv">
+            <p style="cursor: text; display: none;">
+                Felis cumpleee miamoorrr&lt;33
+                <br>
+                <br>
+                Que rápido pasa el tiempooo que feliz y afortunado me siento de tenerte a mi lado, ya 4 años desde que estoy contigo y todos han sido de risas y crecimiento juntos de vdd que no me arrepiento de nada al estar contigo&lt;33
+                Estoy tan feliz por que a lo largo de todos estos años hemos crecido como personas, superado metas y construido recuerdos que jamás olvidaré. Sabes que siempre estaré para ti en cada paso que des, al igual que tú lo has estado para mi&lt;33
+                <br>
+                <br>
+                Espero que en esta nueva etapa que comenzamos todos tus sueños y metas se hagan realidad. Que sigas brillando con tu personalidad tan linda y única que te hace muy especial para mi y para todos los demás
+                Gachas por siempre ser la gran novia que eres y por darme la oportunidad de formar parte de tu vida. Estoy muuuy pero q muy emocionado por todo lo que el futuro nos tiene preparado para nosotros y estoy segurisisisimo que cada día a tu lado será aun mejor que el anterior&lt;3
+                <br>
+                <br>
+                Felis cumple y espero que este día sea tan bonito ermoso presioso perfecto como tú lo eres bb, T amo como no tienes ideaaa
+                Espero festejar muchísimos más cumpleaños a tu lado&lt;3
+                Con todo mi amor y cariño
+                <br>
+                <br>
+                Yael&lt;3
+                <br>
+                <br>
+                0&lt;55&gt;4
+            </p>
+        </div>
+    </div>
+
+    <!--CELULAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...-->
+    <div class="cartacelu">
+        <div style="min-width: 30%; width: 30%; margin-right: 20px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 30%;">
+            <p style="line-height: 1em; text-align: center; color: #822841; font-family: ahorasi; font-size: 2.5cqmax;">Feliz<br>Cumplee<br>💗</p>
+        </div>
+
+        <div class="divimagencelu">
+            <img class="imagencelu" src="melmonita.png">
+        </div>
+
+        <div class="sobrecelu" id="miDivcelu">
+            <p style="cursor: text; display: none;">
+                Felis cumpleee miamoorrr&lt;33
+                <br>
+                <br>
+                Que rápido pasa el tiempooo que feliz y afortunado me siento de tenerte a mi lado, ya 4 años desde que estoy contigo y todos han sido de risas y crecimiento juntos de vdd que no me arrepiento de nada al estar contigo&lt;33
+                Estoy tan feliz por que a lo largo de todos estos años hemos crecido como personas, superado metas y construido recuerdos que jamás olvidaré. Sabes que siempre estaré para ti en cada paso que des, al igual que tú lo has estado para mi&lt;33
+                <br>
+                <br>
+                Espero que en esta nueva etapa que comenzamos todos tus sueños y metas se hagan realidad. Que sigas brillando con tu personalidad tan linda y única que te hace muy especial para mi y para todos los demás
+                Gachas por siempre ser la gran novia que eres y por darme la oportunidad de formar parte de tu vida. Estoy muuuy pero q muy emocionado por todo lo que el futuro nos tiene preparado para nosotros y estoy segurisisisimo que cada día a tu lado será aun mejor que el anterior&lt;3
+                <br>
+                <br>
+                Felis cumple y espero que este día sea tan bonito ermoso presioso perfecto como tú lo eres bb, T amo como no tienes ideaaa
+                Espero festejar muchísimos más cumpleaños a tu lado&lt;3
+                Con todo mi amor y cariño
+                <br>
+                <br>
+                Yael&lt;3
+                <br>
+                <br>
+                0&lt;55&gt;4
+            </p>
+        </div>
+    </div>
+    <!--CELULAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...-->
+
+    <script>
+        var miDiv = document.getElementById("miDiv");
+        var texto = miDiv.querySelector("p");
+        var clicked = false; // Bandera para rastrear si se ha hecho clic
+
+        miDiv.addEventListener("click", function() {
+            if (!clicked) {
+                // Cambiar la imagen de fondo aquí si lo deseas
+                miDiv.style.backgroundImage = "url('hoja.png')";
+                texto.style.display = "block";
+                
+                
+                miDiv.style.borderColor = "#FDF9F2";
+                texto.style.display = "block";
+                clicked = true; // Marcar como clic hecho
+            }
+        });
+
+        // Función para cambiar la imagen de fondo
+        function changeBackgroundImage() {
+            var divElement = document.getElementById("miDiv");
+            var currentImage = divElement.style.backgroundImage;
+            var newImage = currentImage.includes("hoja.png") ? "url('hoja.png')" : "url('hoja.png')";
+            divElement.style.backgroundImage = newImage;
+        }
+
+        //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+        var miDivcelu = document.getElementById("miDivcelu");
+        var textocelu = miDivcelu.querySelector("p");
+        var clickedcelu = false; // Bandera para rastrear si se ha hecho clic
+
+        miDivcelu.addEventListener("click", function() {
+            if (!clickedcelu) {
+                // Cambiar la imagen de fondo aquí si lo deseas
+                miDivcelu.style.backgroundImage = "url('hoja.png')";
+                textocelu.style.display = "block";
+                
+                
+                miDivcelu.style.borderColor = "#FDF9F2";
+                textocelu.style.display = "block";
+                clickedcelu = true; // Marcar como clic hecho
+            }
+        });
+
+        // Función para cambiar la imagen de fondo
+        function changeBackgroundImage() {
+            var divElement = document.getElementById("miDiv");
+            var currentImage = divElement.style.backgroundImage;
+            var newImage = currentImage.includes("hoja.png") ? "url('hoja.png')" : "url('hoja.png')";
+            divElement.style.backgroundImage = newImage;
+        }
+
+       //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("miAudio");
+            audio.play();
+        });
+
+
+         
+        var audio = document.getElementById("myAudio");
+
+        function playAudio() {
+            audio.play();
+        }
+
+                // Función para detectar si el usuario está en un dispositivo móvil
+                function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        // Función para mostrar un mensaje dependiendo del tipo de dispositivo
+        function showDeviceMessage() {
+            if (isMobileDevice()) {
+                document.getElementById("message").textContent = "Estás visitando desde un dispositivo móvil.";
+            } else {
+                document.getElementById("message").textContent = "Estás visitando desde una computadora.";
+            }
+        }
+
+        // Ejecutar la función al cargar la página
+        window.onload = showDeviceMessage;
+
+
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (isMobileDevice()) {
+                document.body.classList.add("movil");
+            } else {
+                document.body.classList.add("computadora");
+            }
+        });
+    </script>
+</body>
+</html>
